@@ -1,4 +1,3 @@
-
 import React, { useState, useMemo } from 'react';
 import { invigilatorData } from '../data/scheduleData.ts';
 
@@ -21,8 +20,6 @@ const QueryView: React.FC = () => {
         Object.entries(selectedInvigilator.schedule).forEach(([header, location]) => {
             const match = header.match(/(\d{4}-\d{2}-\d{2})\s?\((\d{1,2}:\d{2}-\d{1,2}:\d{2})-(صباحا|مساء)\)?/);
             if (match) {
-                // FIX: Destructuring from a regex match can result in undefined values if a capture group is not found.
-                // This check ensures date, time, and period are all defined as strings before being used, resolving type errors.
                 const [, date, time, period] = match;
                 if (date && time && period) {
                     if (!groups[date]) {

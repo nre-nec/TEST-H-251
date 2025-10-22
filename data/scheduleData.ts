@@ -1,7 +1,5 @@
-
 import { InvigilatorData } from '../types.ts';
 
-// FIX: Removed extra closing parenthesis from several header strings (e.g., "2025-10-27 (9:00-10:00-صباحا))" became "2025-10-27 (9:00-10:00-صباحا)") for data consistency.
 export const headers: string[] = [
     "2025-10-26 (9:00-10:00-صباحا)", "2025-10-26 (11:30-12:30-مساء)", "2025-10-26(4:00-5:00-مساء)", "2025-10-26(5:30-6:30-مساء)",
     "2025-10-27 (9:00-10:00-صباحا)", "2025-10-27 (11:30-12:30-مساء)", "2025-10-27(4:00-5:00-مساء)", "2025-10-27(5:30-6:30-مساء)",
@@ -32,7 +30,7 @@ const rawData = `
 داليا محمد فتحي عبد المقصود	B7				B7	B8			B8				C6	B8			B8					C7			B7				B7	A7	D5		C2	B7	D8			
 رانيا عبد الخالق جودة الحسين	B8				B8	B8			B8				C7	B8			B8	A7				C7			B8				B7	A8			C6	B7			A8	
 رشا عبدالحليم  القاضي	B8	A7			B8	C2			C6				C7	D6			C6					C8			B8				C7	A8			C6	B8			A8	
-رولا حسن محمد ازهري	C6		D7		C2	C2			C7				C8	D6			C7	A7				C8			C6				C7				C7	B8				
+rolaa hassan mohammed azhari	C6		D7		C2	C2			C7				C8	D6			C7	A7				C8			C6				C7				C7	B8				
 ريم علي حوفان الشمراني	C7	A7			C6	C6			C7	A7			C9	D7			C7	A8																				
 زينب ربيع عبد المرضي	C7				C6	C6			C7			D7	C9	D7			C7					C9			C6		F9		C8				C8	C6				C9
 سارة رويشد خويتيم العنزي	C8				C7	C6			C8	A7			D4	D7			C8	A8				C9			C7		C9	A7	C8				C8					
