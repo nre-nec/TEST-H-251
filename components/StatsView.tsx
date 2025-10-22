@@ -1,5 +1,6 @@
+
 import React, { useMemo } from 'react';
-import { invigilatorData } from '../data/scheduleData';
+import { invigilatorData } from '../data/scheduleData.ts';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const StatsView: React.FC = () => {

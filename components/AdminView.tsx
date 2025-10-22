@@ -1,5 +1,6 @@
+
 import React, { useMemo } from 'react';
-import { headers, invigilatorData } from '../data/scheduleData';
+import { headers, invigilatorData } from '../data/scheduleData.ts';
 
 const AdminView: React.FC = () => {
 

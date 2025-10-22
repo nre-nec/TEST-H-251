@@ -1,5 +1,6 @@
+
 import React, { useState, useMemo } from 'react';
-import { headers, invigilatorData } from '../data/scheduleData';
+import { headers, invigilatorData } from '../data/scheduleData.ts';
 
 // Helper to parse header string
 const parseHeader = (header: string) => {

@@ -1,5 +1,6 @@
+
 import React, { useState, useMemo } from 'react';
-import { invigilatorData } from '../data/scheduleData';
+import { invigilatorData } from '../data/scheduleData.ts';
 
 const QueryView: React.FC = () => {
     const [selectedInvigilatorName, setSelectedInvigilatorName] = useState<string>('');

@@ -1,12 +1,12 @@
 
 import React, { useState } from 'react';
-import Header from './components/Header';
-import ScheduleView from './components/ScheduleView';
-import AdminView from './components/AdminView';
-import StatsView from './components/StatsView';
-import LoginModal from './components/LoginModal';
-import QueryView from './components/QueryView';
-import { AppView } from './types';
+import Header from './components/Header.tsx';
+import ScheduleView from './components/ScheduleView.tsx';
+import AdminView from './components/AdminView.tsx';
+import StatsView from './components/StatsView.tsx';
+import LoginModal from './components/LoginModal.tsx';
+import QueryView from './components/QueryView.tsx';
+import { AppView } from './types.ts';
 
 const App: React.FC = () => {
   const [currentView, setCurrentView] = useState<AppView>(AppView.QUERY);
