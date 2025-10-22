@@ -1,0 +1,5 @@
+{
+  "name": "Exam Invigilator Schedule",
+  "description": "An interactive web application for viewing exam invigilator schedules, with password-protected sections for committee members and statistical analysis.",
+  "requestFramePermissions": []
+}
