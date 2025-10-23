@@ -1,6 +1,14 @@
 import React, { useState, useMemo } from 'react';
 import { invigilatorData } from '../data/scheduleData.ts';
 
+// Fix: Define an `Assignment` interface to strongly type schedule assignments.
+// This resolves a TypeScript error where `.map` could not be called on `assignments`.
+interface Assignment {
+    time: string;
+    period: string;
+    location: string;
+}
+
 const QueryView: React.FC = () => {
     const [selectedInvigilatorName, setSelectedInvigilatorName] = useState<string>('');
 
@@ -15,9 +23,10 @@ const QueryView: React.FC = () => {
     const groupedSchedule = useMemo(() => {
         if (!selectedInvigilator) return null;
 
-        const groups: { [key: string]: { time: string; period: string; location: string }[] } = {};
+        const groups: { [key: string]: Assignment[] } = {};
         
-        Object.entries(selectedInvigilator.schedule).forEach(([header, location]) => {
+        Object.keys(selectedInvigilator.schedule).forEach((header) => {
+            const location = selectedInvigilator.schedule[header];
             const match = header.match(/(\d{4}-\d{2}-\d{2})\s?\((\d{1,2}:\d{2}-\d{1,2}:\d{2})-(صباحا|مساء)\)?/);
             if (match) {
                 const [, date, time, period] = match;
@@ -42,7 +51,7 @@ const QueryView: React.FC = () => {
         // Sort the dates themselves
         const sortedDates = Object.keys(groups).sort((a, b) => new Date(a).getTime() - new Date(b).getTime());
         
-        const sortedGroups: { [key: string]: { time: string; period: string; location: string }[] } = {};
+        const sortedGroups: { [key: string]: Assignment[] } = {};
         sortedDates.forEach(date => {
             sortedGroups[date] = groups[date];
         });
@@ -83,7 +92,7 @@ const QueryView: React.FC = () => {
                                         {new Date(date).toLocaleDateString('en-US', { weekday: 'long', day: 'numeric', month: 'long' })}
                                     </p>
                                     <ul className="space-y-2">
-                                        {assignments.map((a, i) => (
+                                        {(assignments as Assignment[]).map((a, i) => (
                                             <li key={i} className="flex justify-between items-center text-sm">
                                                 <div className="flex items-center gap-2">
                                                     <span className={`font-semibold ${a.period === 'صباحا' ? 'text-amber-600' : 'text-indigo-600'}`}>{a.period === 'صباحا' ? 'AM' : 'PM'}</span>

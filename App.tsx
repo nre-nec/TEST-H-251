@@ -8,6 +8,14 @@ import LoginModal from './components/LoginModal.tsx';
 import QueryView from './components/QueryView.tsx';
 import { AppView } from './types.ts';
 
+const Footer: React.FC = () => {
+  return (
+    <footer className="text-center py-6 text-gray-500 text-sm bg-slate-100 border-t border-slate-200">
+      <p>{`© ${new Date().getFullYear()} وحدة التطوير والجودة – كلية الشمال للتمريض الأهلية. جميع الحقوق محفوظة.`}</p>
+    </footer>
+  );
+};
+
 const App: React.FC = () => {
   const [currentView, setCurrentView] = useState<AppView>(AppView.QUERY);
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
@@ -56,14 +64,14 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-100">
+    <div className="min-h-screen bg-slate-100 flex flex-col">
       <Header 
         currentView={currentView} 
         onTabClick={handleTabClick} 
         isAuthenticated={isAuthenticated}
         onLogout={handleLogout}
       />
-      <main className="p-4 sm:p-6 lg:p-8">
+      <main className="p-4 sm:p-6 lg:p-8 flex-grow">
         {renderView()}
       </main>
       {isLoginModalOpen && (
@@ -72,6 +80,7 @@ const App: React.FC = () => {
           onSuccess={handleLoginSuccess}
         />
       )}
+      <Footer />
     </div>
   );
 };

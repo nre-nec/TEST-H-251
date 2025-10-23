@@ -30,7 +30,7 @@ const rawData = `
 داليا محمد فتحي عبد المقصود	B7				B7	B8			B8				C6	B8			B8					C7			B7				B7	A7	D5		C2	B7	D8			
 رانيا عبد الخالق جودة الحسين	B8				B8	B8			B8				C7	B8			B8	A7				C7			B8				B7	A8			C6	B7			A8	
 رشا عبدالحليم  القاضي	B8	A7			B8	C2			C6				C7	D6			C6					C8			B8				C7	A8			C6	B8			A8	
-rolaa hassan mohammed azhari	C6		D7		C2	C2			C7				C8	D6			C7	A7				C8			C6				C7				C7	B8				
+رولا حسن محمد ازهري	C6		D7		C2	C2			C7				C8	D6			C7	A7				C8			C6				C7				C7	B8				
 ريم علي حوفان الشمراني	C7	A7			C6	C6			C7	A7			C9	D7			C7	A8																				
 زينب ربيع عبد المرضي	C7				C6	C6			C7			D7	C9	D7			C7					C9			C6		F9		C8				C8	C6				C9
 سارة رويشد خويتيم العنزي	C8				C7	C6			C8	A7			D4	D7			C8	A8				C9			C7		C9	A7	C8				C8					
@@ -55,7 +55,7 @@ rolaa hassan mohammed azhari	C6		D7		C2	C2			C7				C8	D6			C7	A7				C8			C6				C
 نرجس محمد محمد صيام	E8				E8				F10	D6			F5			A8	F7	D6	C9		D6		B8		F6	C14							F6				C9	
 نعيمة محمد السيد احمد	E9				E9		D7		F8	D6			F6				F7	D6			D6				F6	C15	C8	D5				C9	F6					
 هبة أحمد عبدالمعطي	E9				E9		D7		F8	D7			F6				F8	D7		D6	D7		B8		F7	C16							F7				D6	
-هدايا إسماعيل أبو bكر إسماعيل	F8				F1		D8		F8				F7				F8	D7			D7				F7	C17	C9		C8	D7			F7				D6	
+هدايا إسماعيل أبو بكر إسماعيل	F8				F1		D8		F8				F7				F8	D7			D7				F7	C17	C9		C8	D7			F7				D6	
 هدي محمد عبد الرحمن فليفل	F8				F1		D8		F9				F7		F10		F9	D7		C6	D7				F7	C18						C8	F8				D6	
 هند ابو السعود أحمد الصعيدي	F9				F10				F9	D7			F8		C8		F9	D8			D8				F8	C19			C9	D7			F8				D7	
 هويدا محمد علي حسن			C9									D7			C9	A7		D8		D6	D8	D8		B7	F8	C8			C9	D7			F9	C9			D7	
